@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewKhan Learning Hub</title>
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #e94560;
+            --dark: #0a0b10;
+            --card-bg: #16213e;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            background-color: var(--dark);
+            color: white;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            border-bottom: 4px solid var(--primary);
+        }
+        .container { padding: 40px 15px; max-width: 1100px; margin: auto; }
+        
+        /* Course Cards Section */
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.4s;
+            border: 1px solid #25293a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .card:hover { transform: translateY(-15px); border-color: var(--primary); }
+        .card img { width: 100%; height: 200px; object-fit: cover; }
+        .card-content { padding: 25px; }
+        .card h3 { color: var(--primary); margin: 0 0 10px 0; font-size: 1.5rem; }
+        .card p { color: #ccc; font-size: 0.95rem; }
+        
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(145deg, #1a1a2e, #16213e);
+            padding: 50px 20px;
+            border-radius: 30px;
+            margin-top: 60px;
+            text-align: center;
+            border: 1px solid #25293a;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            margin: 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-whatsapp:hover { background: #1ebd57; transform: scale(1.05); }
+        .btn-facebook { background: #1877F2; color: white; }
+        .btn-facebook:hover { background: #145dbf; transform: scale(1.05); }
+        
+        footer { padding: 40px; text-align: center; color: #777; font-size: 0.9rem; border-top: 1px solid #222; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 style="font-size: 3.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px;">NewKhan Learning Hub</h1>
+        <p style="font-size: 1.4rem; color: var(--primary); font-weight: 300;">Bright Future Starts With Great Skills</p>
+    </header>
+
+    <div class="container">
+        <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">Hamare Top Courses</h2>
+        <p style="text-align: center; color: #888; margin-bottom: 40px;">Professional training jo aapko expert banaye gi</p>
+        
+        <div class="course-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&q=80" alt="Web Development">
+                <div class="card-content">
+                    <h3>Web Development</h3>
+                    <p>Modern websites banana seekhein. HTML, CSS aur JavaScript ka mukammal course.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586717791821-3f44a563dc4c?w=500&q=80" alt="Graphic Design">
+                <div class="card-content">
+                    <h3>Graphic Design</h3>
+                    <p>Photoshop aur Illustrator seekhein. Logo, posters aur professional ads banana seekhein.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="Digital Marketing">
+                <div class="card-content">
+                    <h3>Digital Marketing</h3>
+                    <p>Social media marketing aur SEO seekh kar apne business ko top par le jayien.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2 style="font-size: 2rem;">Rabta Karain & Join Karain</h2>
+            <p style="color: #bbb; margin-bottom: 30px;">Mazeed maloomat ya admission ke liye niche diye gaye buttons par click karain:</p>
+            
+            <a href="https://wa.me/923276175848" target="_blank" class="btn btn-whatsapp">
+                💬 WhatsApp: 0327-6175848
+            </a>
+
+            <a href="https://www.facebook.com/share/17sk5Ak78a/" target="_blank" class="btn btn-facebook">
+                📘 Official Facebook Page
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NewKhan Learning Hub | Designed with ❤️ by Fahad Niazi</p>
+    </footer>
+
+</body>
+</html>
