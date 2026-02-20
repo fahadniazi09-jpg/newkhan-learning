@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NewKhan Learning Hub | Fahad Niazi</title>
+    <title>Fahad Niazi Learning Hub | Fahad Akram Khan</title>
     <style>
         :root {
             --primary: #00d2ff;
             --secondary: #e94560;
             --dark: #0a0b10;
             --card-bg: #16213e;
+            --accent: #ffcc00;
         }
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -18,7 +19,6 @@
             color: white;
             line-height: 1.6;
         }
-        /* Top Navigation with Photo */
         nav {
             background: rgba(22, 33, 62, 0.9);
             padding: 10px 20px;
@@ -37,19 +37,15 @@
             border-radius: 50%;
             border: 2px solid var(--primary);
             object-fit: cover;
-            background: #eee;
         }
-        
         header {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
                         url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200');
             background-size: cover;
-            padding: 80px 20px;
+            padding: 60px 20px;
             text-align: center;
         }
-        .container { padding: 40px 15px; max-width: 1100px; margin: auto; }
-        
-        /* Pricing Badge */
+        .container { padding: 30px 15px; max-width: 1000px; margin: auto; }
         .price-tag {
             background: var(--secondary);
             padding: 10px 25px;
@@ -57,105 +53,88 @@
             font-weight: bold;
             font-size: 1.2rem;
             display: inline-block;
-            margin: 20px 0;
+            margin: 15px 0;
         }
-
         .course-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
         }
         .card {
             background: var(--card-bg);
-            border-radius: 15px;
+            border-radius: 12px;
             padding: 20px;
             border: 1px solid #25293a;
-            transition: 0.3s;
         }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        .card h3 { color: var(--primary); margin-top: 0; }
-        .card p { font-size: 0.9rem; color: #bbb; }
-
-        .contact-box {
+        .card h3 { color: var(--primary); margin: 0 0 10px 0; }
+        .payment-box {
             background: #1a1a2e;
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
-            text-align: center;
-            margin-top: 50px;
-            border: 1px solid var(--primary);
+            margin-top: 40px;
+            border: 1px solid var(--accent);
+        }
+        .bank-details {
+            text-align: left;
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .bank-details p { margin: 5px 0; font-size: 0.95rem; }
+        .instruction-step {
+            background: rgba(233, 69, 96, 0.15);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 5px solid var(--secondary);
+            margin-top: 20px;
         }
         .btn {
             display: inline-block;
             padding: 12px 30px;
-            margin: 10px;
+            margin-top: 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             color: white;
+            background: #25D366;
         }
-        .btn-wa { background: #25D366; }
-        .btn-fb { background: #1877F2; }
-
-        footer { text-align: center; padding: 40px; color: #555; }
+        footer { text-align: center; padding: 30px; color: #666; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
     <nav>
         <div class="profile-section">
-            <img src="my-photo.jpg" alt="Fahad Niazi" class="profile-img">
-            <span style="font-weight: bold; letter-spacing: 1px;">FAHAD NIAZI</span>
+            <img src="my-photo.jpg" alt="Fahad Akram Khan" class="profile-img">
+            <span style="font-weight: bold;">FAHAD NIYAZI</span>
         </div>
-        <div style="font-size: 0.8rem; color: var(--primary);">NewKhan Learning Hub</div>
+        <div style="font-size: 0.7rem; color: var(--primary);">Learning Hub Official</div>
     </nav>
 
     <header>
-        <h1>NewKhan Learning Hub</h1>
-        <p style="font-size: 1.3rem;">Hamare paas 100+ courses hain jin ki total price sirf 3000 rupees hai.</p>
-        <div class="price-tag">Full Bundle: RS 3,000/- Only</div>
+        <h1>Fahad Niazi Learning Hub</h1>
+        <p>Hamare paas 100+ professional courses hain jin ki total price sirf 3000 rupees hai.</p>
+        <div class="price-tag">Complete Drive Access: RS 3,000/-</div>
     </header>
 
     <div class="container">
-        <h2 style="text-align: center; margin-bottom: 40px;">Premium Course Library (100+ Courses)</h2>
-        
+        <h2 style="text-align: center;">Premium Courses Library</h2>
         <div class="course-grid">
-            <div class="card">
-                <h3>E-Commerce Giants</h3>
-                <p>Amazon & eBay Product Hunting, Listing, and Account Management (A-Z).</p>
-            </div>
-            <div class="card">
-                <h3>Trading Mastery</h3>
-                <p>Binance Future & Spot Trading, Crypto Signals, and Risk Management.</p>
-            </div>
-            <div class="card">
-                <h3>Freelancing</h3>
-                <p>Fiverr Ads, Upwork Strategy, and Professional Client Communication.</p>
-            </div>
-            <div class="card">
-                <h3>Digital Ads</h3>
-                <p>Facebook Ads, Google Ads, and Target Audience Marketing.</p>
-            </div>
-            <div class="card">
-                <h3>Social Media</h3>
-                <p>Instagram Growth, TikTok Marketing, and Content Creation.</p>
-            </div>
-            <div class="card">
-                <h3>And Much More...</h3>
-                <p>100+ Skill-based courses included in the Drive link.</p>
-            </div>
+            <div class="card"><h3>Amazon & eBay</h3><p>Product Hunting, Listing & Account Handling.</p></div>
+            <div class="card"><h3>Crypto Trading</h3><p>Binance Future/Spot Trading & Mastery.</p></div>
+            <div class="card"><h3>Digital Marketing</h3><p>Facebook, Google & Social Media Ads.</p></div>
+            <div class="card"><h3>Freelancing</h3><p>Fiverr & Upwork Professional Training.</p></div>
         </div>
 
-        <div class="contact-box">
-            <h2>Get Instant Access to Drive</h2>
-            <p>Click below to contact me for the full 100+ Course Bundle.</p>
-            <a href="https://wa.me/923276175848" class="btn btn-wa">WhatsApp: 0327-6175848</a>
-            <a href="https://www.facebook.com/share/17sk5Ak78a/" class="btn btn-fb">Official Facebook</a>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 NewKhan Learning Hub | Verified by Fahad Niazi
-    </footer>
-
-</body>
-</html>
+        <div class="payment-box">
+            <h2 style="color: var(--accent); margin-top: 0;">💳 Payment Information</h2>
+            <p>Please use the details below to complete your payment:</p>
+            
+            <div class="bank-details">
+                <p><strong>🏦 MEEZAN BANK</strong></p>
+                <p>Title: FAHAD AKRAM KHAN</p>
+                <p>Acc: 77010113160130</p>
+                <p>IBAN: PK69MEZN0077010113160130</p>
+                <p>Branch: Khanewal Branch</p>
+                <hr style="border: 0.1px solid #3
