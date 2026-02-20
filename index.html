@@ -3,78 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fahad Niazi Learning Hub | Official</title>
+    <title>Fahad Niazi Learning Hub | Official Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         :root { --primary: #00d2ff; --secondary: #e94560; --dark: #0a0b10; --card-bg: #16213e; --accent: #ffcc00; }
         body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark); color: white; overflow-x: hidden; }
         nav { background: rgba(22, 33, 62, 0.95); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; border-bottom: 2px solid var(--primary); }
         .profile-img { width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--primary); object-fit: cover; }
-        header { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200'); background-size: cover; padding: 80px 20px; text-align: center; }
-        .container { padding: 20px; max-width: 1000px; margin: auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: var(--card-bg); border-radius: 15px; padding: 20px; border: 1px solid #25293a; transition: 0.3s; position: relative; overflow: hidden; }
+        header { background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200'); background-size: cover; padding: 100px 20px; text-align: center; }
+        .container { padding: 40px 20px; max-width: 1000px; margin: auto; }
+        
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 40px; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 10px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 30px; }
+        .card { background: var(--card-bg); border-radius: 15px; padding: 25px; border: 1px solid #25293a; transition: 0.3s; }
         .card:hover { border-color: var(--primary); transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,210,255,0.2); }
-        .review-card { background: #1a1a2e; border-left: 4px solid var(--primary); padding: 15px; margin-bottom: 15px; border-radius: 0 10px 10px 0; }
-        .faq { background: #0f3460; padding: 15px; border-radius: 8px; margin-bottom: 10px; cursor: pointer; }
-        .payment-box { background: linear-gradient(145deg, #1a1a2e, #16213e); padding: 30px; border-radius: 20px; border: 1px solid var(--accent); text-align: center; margin-top: 40px; }
+        .card h3 { color: var(--primary); margin-top: 0; }
+
+        /* Review Section */
+        .review-card { background: #1a1a2e; border-left: 5px solid var(--primary); padding: 20px; margin-bottom: 20px; border-radius: 0 15px 15px 0; box-shadow: 5px 5px 15px rgba(0,0,0,0.3); }
         
-        /* Floating WA Button */
-        .float-wa { position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 2px 2px 10px rgba(0,0,0,0.5); z-index: 2000; text-decoration: none; }
+        /* FAQ Section */
+        .faq-container { margin-top: 60px; }
+        .faq-item { background: #0f3460; padding: 20px; border-radius: 10px; margin-bottom: 15px; border: 1px solid #16213e; }
+        .faq-item h4 { margin: 0 0 10px 0; color: var(--accent); font-size: 1.1rem; }
+        .faq-item p { margin: 0; font-size: 0.95rem; color: #ccc; }
+
+        /* Payment Box */
+        .payment-box { background: linear-gradient(145deg, #1a1a2e, #16213e); padding: 40px; border-radius: 25px; border: 2px solid var(--accent); text-align: center; margin-top: 60px; }
+        .bank-details { text-align: left; background: rgba(0,0,0,0.4); padding: 25px; border-radius: 15px; border: 1px solid #333; margin: 25px 0; }
         
-        .btn { padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; display: inline-block; transition: 0.3s; }
+        /* Buttons */
+        .float-wa { position: fixed; bottom: 25px; right: 25px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 2px 5px 15px rgba(0,0,0,0.5); z-index: 2000; text-decoration: none; }
+        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 30px; }
+        .btn { padding: 15px 35px; border-radius: 10px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; font-size: 1rem; }
         .btn-wa { background: #25D366; }
         .btn-fb { background: #1877F2; }
-        footer { text-align: center; padding: 40px; color: #555; border-top: 1px solid #222; margin-top: 50px; }
+        
+        footer { text-align: center; padding: 50px; color: #666; border-top: 1px solid #222; margin-top: 80px; background: #050505; }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/923276175848" class="float-wa" title="Chat on WhatsApp">💬</a>
+    <a href="https://wa.me/923276175848" class="float-wa" title="Contact Fahad Niazi">💬</a>
 
     <nav>
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
             <img src="my-photo.jpg" alt="Fahad Niazi" class="profile-img">
-            <span style="font-weight: bold; letter-spacing: 1px;">FAHAD NIYAZI</span>
+            <span style="font-weight: bold; letter-spacing: 1px; font-size: 1.1rem;">FAHAD NIAZI</span>
         </div>
-        <div style="background: var(--secondary); padding: 5px 10px; border-radius: 5px; font-size: 0.7rem; font-weight: bold;">OFFICIAL HUB</div>
+        <div style="background: var(--secondary); padding: 6px 12px; border-radius: 5px; font-size: 0.75rem; font-weight: bold;">VERIFIED HUB</div>
     </nav>
 
     <header>
-        <h1 data-aos="fade-down">Fahad Niazi Learning Hub</h1>
-        <p data-aos="fade-up">Master 100+ Skills & Start Your Online Business Journey</p>
-        <div class="price-tag" style="background: var(--secondary); padding: 10px 25px; border-radius: 50px; font-weight: bold;">Full Drive Access: RS 3,000/-</div>
+        <h1 data-aos="zoom-out">Fahad Niazi Learning Hub</h1>
+        <p data-aos="fade-up" data-aos-delay="200" style="font-size: 1.2rem; color: #ddd;">Start Your Professional Journey with 100+ Premium Courses</p>
+        <div class="price-tag" style="background: var(--secondary); padding: 12px 30px; border-radius: 50px; font-weight: bold; display: inline-block; margin-top: 20px; font-size: 1.3rem; box-shadow: 0 5px 15px rgba(233, 69, 96, 0.4);">Bundle Price: RS 3,000/-</div>
     </header>
 
     <div class="container">
-        <h2 style="text-align: center;" data-aos="zoom-in">🚀 Premium Skills Library</h2>
+        <div style="text-align: center;"><h2 class="section-title" data-aos="fade-up">🚀 Premium Course Categories</h2></div>
         <div class="grid">
-            <div class="card" data-aos="flip-left"><h3>📦 E-Commerce</h3><p>Amazon, eBay & Shopify dropshipping from scratch.</p></div>
-            <div class="card" data-aos="flip-left" data-aos-delay="100"><h3>📈 Trading</h3><p>Master Binance, Forex & Crypto signals.</p></div>
-            <div class="card" data-aos="flip-left" data-aos-delay="200"><h3>📱 Digital Marketing</h3><p>Expert Facebook, Google & TikTok ads training.</p></div>
-            <div class="card" data-aos="flip-left" data-aos-delay="300"><h3>💻 Freelancing</h3><p>Secure high-paying clients on Fiverr & Upwork.</p></div>
+            <div class="card" data-aos="fade-up"><h3>📦 E-Commerce</h3><p>Complete A-Z Training of Amazon, eBay, Shopify, and Local Dropshipping for Beginners.</p></div>
+            <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>📈 Crypto & Trading</h3><p>Binance Future/Spot Trading, Technical Analysis, and Daily Signal Strategies.</p></div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>📱 Digital Ads</h3><p>Master Facebook Ads, Google Ads, TikTok Marketing, and High-Converting Sales Funnels.</p></div>
+            <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>💻 Freelancing</h3><p>Step-by-step guide to earn from Fiverr, Upwork, and LinkedIn Client Hunting.</p></div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400"><h3>🎥 Video Editing</h3><p>Professional Adobe Premiere Pro and CapCut editing for YouTube and Social Media.</p></div>
+            <div class="card" data-aos="fade-up" data-aos-delay="500"><h3>🎨 Graphic Design</h3><p>Master Photoshop, Canva, and Illustrator to create high-quality brand designs.</p></div>
         </div>
 
-        <h2 style="margin-top: 60px;" data-aos="fade-right">⭐ Student Feedback</h2>
-        <div class="review-card" data-aos="fade-left">"Highly recommended! The content quality is amazing for just 3000 rupees." - <strong>Kamran Ali</strong></div>
-        <div class="review-card" data-aos="fade-left" data-aos-delay="100">"Everything is well organized in Google Drive. Very easy to learn." - <strong>Sajid</strong></div>
+        <div style="text-align: center; margin-top: 80px;"><h2 class="section-title" data-aos="fade-up">⭐ Student Success Stories</h2></div>
+        <div class="review-card" data-aos="fade-right">"Fahad Niazi bhai ki drive mein waqai wo sab kuch hai jo hazaron ke courses mein hota hai. Best experience!" - <strong>Ahmed Raza</strong></div>
+        <div class="review-card" data-aos="fade-right" data-aos-delay="200">"Trading ka course sabse best hai, boht asaan lafzon mein samjhaya gaya hai. RS 3000 toh kuch bhi nahi iske samne." - <strong>Zeeshan Malik</strong></div>
+        <div class="review-card" data-aos="fade-right" data-aos-delay="400">"Got my drive access within 1 hour after sending screenshot. Super fast service!" - <strong>Hamza Ali</strong></div>
+
+        <div class="faq-container">
+            <div style="text-align: center;"><h2 class="section-title" data-aos="fade-up">❓ Frequently Asked Questions</h2></div>
+            <div class="faq-item" data-aos="fade-up">
+                <h4>1. Is this payment for one time only?</h4>
+                <p>Yes! You pay only RS 3,000 once and get lifetime access to all 100+ courses and future updates.</p>
+            </div>
+            <div class="faq-item" data-aos="fade-up">
+                <h4>2. How will I access the courses?</h4>
+                <p>After payment, send us the screenshot. We will share a Private Google Drive link with your email where you can watch or download everything.</p>
+            </div>
+            <div class="faq-item" data-aos="fade-up">
+                <h4>3. Are these courses in Urdu or English?</h4>
+                <p>Most of the premium courses are in easy Urdu/Hindi, while some advanced international courses are in English.</p>
+            </div>
+            <div class="faq-item" data-aos="fade-up">
+                <h4>4. Can I get help if I get stuck?</h4>
+                <p>Yes, you can contact Fahad Niazi directly on WhatsApp for any issues regarding drive access.</p>
+            </div>
+        </div>
 
         <div class="payment-box" data-aos="zoom-in">
-            <h2 style="color: var(--accent);">💳 Secure Enrollment</h2>
-            <div style="text-align: left; background: rgba(0,0,0,0.3); padding: 20px; border-radius: 10px; border: 1px solid #333;">
-                <p><strong>🏦 MEEZAN BANK</strong><br>FAHAD AKRAM KHAN | 77010113160130<br>IBAN: PK69MEZN0077010113160130</p>
-                <hr style="border: 0.5px solid #222;">
-                <p><strong>📱 SadaPay / NayaPay / UPaisa</strong><br>0327-6175848 (Fahad Akram Khan)</p>
+            <h2 style="color: var(--accent); margin-top: 0; font-size: 2rem;">💳 Get Instant Enrollment</h2>
+            <p style="font-size: 1.1rem;">Transfer <strong>RS 3,000</strong> and start your journey today!</p>
+            
+            <div class="bank-details">
+                <p><strong>🏦 MEEZAN BANK</strong><br>Title: FAHAD AKRAM KHAN<br>Acc: 77010113160130<br>IBAN: PK69MEZN0077010113160130<br>Branch: Khanewal</p>
+                <hr style="border: 0.5px solid #444; margin: 20px 0;">
+                <p><strong>📱 SadaPay / NayaPay / UPaisa</strong><br>Name: Fahad Akram Khan<br>Number: 03276175848</p>
             </div>
-            <p style="margin-top: 20px;"><strong>Note:</strong> Share screenshot on WhatsApp to get instant Drive access.</p>
+
+            <p style="color: var(--accent); font-weight: bold; background: rgba(255,204,0,0.1); padding: 15px; border-radius: 10px;">
+                📢 Process: Transfer Money -> Take Screenshot -> Send on WhatsApp -> Get Drive Link!
+            </p>
+
             <div class="btn-container">
-                <a href="https://wa.me/923276175848" class="btn btn-wa">WhatsApp Now</a>
-                <a href="https://www.facebook.com/share/17sk5Ak78a/" class="btn btn-fb">Facebook</a>
+                <a href="https://wa.me/923276175848" class="btn btn-wa">WhatsApp: 03276175848</a>
+                <a href="https://www.facebook.com/share/17sk5Ak78a/" class="btn btn-fb">Official Facebook</a>
             </div>
         </div>
     </div>
 
-    <footer>&copy; 2026 Fahad Niazi Learning Hub | 03276175848</footer>
+    <footer>
+        <p style="font-weight: bold; color: #fff;">Fahad Niazi Learning Hub © 2026</p>
+        <p>Providing Quality Education & Professional Skills Across Pakistan</p>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>AOS.init({ duration: 1000, once: true });</script>
