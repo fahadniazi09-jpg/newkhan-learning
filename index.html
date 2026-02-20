@@ -73,6 +73,7 @@
             border-radius: 20px;
             margin-top: 40px;
             border: 1px solid var(--accent);
+            text-align: center;
         }
         .bank-details {
             text-align: left;
@@ -81,24 +82,18 @@
             border-radius: 10px;
             margin: 20px 0;
         }
-        .bank-details p { margin: 5px 0; font-size: 0.95rem; }
-        .instruction-step {
-            background: rgba(233, 69, 96, 0.15);
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 5px solid var(--secondary);
-            margin-top: 20px;
-        }
+        .btn-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            margin-top: 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             color: white;
-            background: #25D366;
+            transition: 0.3s;
         }
+        .btn-wa { background: #25D366; }
+        .btn-fb { background: #1877F2; }
         footer { text-align: center; padding: 30px; color: #666; font-size: 0.8rem; }
     </style>
 </head>
@@ -109,32 +104,46 @@
             <img src="my-photo.jpg" alt="Fahad Akram Khan" class="profile-img">
             <span style="font-weight: bold;">FAHAD NIYAZI</span>
         </div>
-        <div style="font-size: 0.7rem; color: var(--primary);">Learning Hub Official</div>
+        <div style="font-size: 0.7rem; color: var(--primary);">Contact: 03276175848</div>
     </nav>
 
     <header>
         <h1>Fahad Niazi Learning Hub</h1>
-        <p>Hamare paas 100+ professional courses hain jin ki total price sirf 3000 rupees hai.</p>
-        <div class="price-tag">Complete Drive Access: RS 3,000/-</div>
+        <p>100+ Professional Courses Bundle - Best Quality Learning</p>
+        <div class="price-tag">Full Access: RS 3,000/- Only</div>
     </header>
 
     <div class="container">
-        <h2 style="text-align: center;">Premium Courses Library</h2>
+        <h2 style="text-align: center;">Our Top Courses</h2>
         <div class="course-grid">
-            <div class="card"><h3>Amazon & eBay</h3><p>Product Hunting, Listing & Account Handling.</p></div>
-            <div class="card"><h3>Crypto Trading</h3><p>Binance Future/Spot Trading & Mastery.</p></div>
-            <div class="card"><h3>Digital Marketing</h3><p>Facebook, Google & Social Media Ads.</p></div>
-            <div class="card"><h3>Freelancing</h3><p>Fiverr & Upwork Professional Training.</p></div>
+            <div class="card"><h3>Amazon & eBay</h3><p>Complete Product Hunting & Listing Course.</p></div>
+            <div class="card"><h3>Trading</h3><p>Binance Mastery & Crypto Profit Strategies.</p></div>
+            <div class="card"><h3>Digital Ads</h3><p>Facebook, Google & Social Media Advertising.</p></div>
+            <div class="card"><h3>Freelancing</h3><p>Start Earning on Fiverr & Upwork Today.</p></div>
         </div>
 
         <div class="payment-box">
-            <h2 style="color: var(--accent); margin-top: 0;">💳 Payment Information</h2>
-            <p>Please use the details below to complete your payment:</p>
+            <h2 style="color: var(--accent);">💳 Payment & Contact</h2>
+            <p>Send RS 3,000 to any account and share screenshot on WhatsApp.</p>
             
             <div class="bank-details">
-                <p><strong>🏦 MEEZAN BANK</strong></p>
-                <p>Title: FAHAD AKRAM KHAN</p>
-                <p>Acc: 77010113160130</p>
-                <p>IBAN: PK69MEZN0077010113160130</p>
-                <p>Branch: Khanewal Branch</p>
-                <hr style="border: 0.1px solid #3
+                <p><strong>🏦 MEEZAN BANK</strong><br>Title: FAHAD AKRAM KHAN<br>Acc: 77010113160130<br>IBAN: PK69MEZN0077010113160130</p>
+                <hr style="border: 0.1px solid #333;">
+                <p><strong>📱 SadaPay / NayaPay / UPaisa</strong><br>Name: Fahad Akram Khan<br>Number: 03276175848</p>
+            </div>
+
+            <p style="color: var(--accent); font-weight: bold;">⏳ Delivery Time: Access within 24 Hours after payment.</p>
+
+            <div class="btn-container">
+                <a href="https://wa.me/923276175848" class="btn btn-wa">WhatsApp: 03276175848</a>
+                <a href="https://www.facebook.com/share/17sk5Ak78a/" class="btn btn-fb">Facebook Profile</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Fahad Niazi Learning Hub | Verified Professional Training
+    </footer>
+
+</body>
+</html>
